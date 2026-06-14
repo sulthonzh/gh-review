@@ -17,7 +17,6 @@ function runGh(args) {
 }
 
 function getRepos(user) {
-  const flag = user ? `--user ${user}` : '--user @me';
   const out = runGh(`repo list ${user || '@me'} --limit 500 --json nameWithOwner,isFork --jq '.[] | select(.isFork == false) | .nameWithOwner'`);
   return out.split('\n').filter(Boolean);
 }
@@ -27,7 +26,6 @@ function getReviewPRs(repo) {
     const out = runGh(`pr list --repo ${repo} --json number,title,author,createdAt,updatedAt,url,labels,isDraft,reviewDecision,additions,deletions,changedFiles --limit 50`);
     if (!out) return [];
     const prs = JSON.parse(out);
-    // Only return PRs where review is pending or requested
     return prs.filter(pr => pr.reviewDecision !== 'APPROVED');
   } catch {
     return [];
