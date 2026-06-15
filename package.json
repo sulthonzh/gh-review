@@ -2,9 +2,24 @@
   "name": "gh-review",
   "version": "1.0.0",
   "description": "See PRs awaiting your review across all your GitHub repos",
-  "bin": { "gh-review": "./cli.js" },
+  "bin": {
+    "gh-review": "./cli.js"
+  },
   "main": "src/index.js",
-  "scripts": { "test": "node --test tests/*.test.mjs" },
-  "keywords": ["github", "pull-request", "review", "cli"],
-  "license": "MIT"
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "github",
+    "pull-request",
+    "review",
+    "cli"
+  ],
+  "license": "MIT",
+  "files": [
+    "cli.js",
+    "src/",
+    "README.md"
+  ],
+  "author": "Sulthonzh"
 }
