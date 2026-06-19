@@ -21,5 +21,16 @@
     "src/",
     "README.md"
   ],
-  "author": "Sulthonzh"
+  "author": "Sulthonzh",
+  "homepage": "https://github.com/sulthonzh/gh-review#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulthonzh/gh-review.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sulthonzh/gh-review/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }
